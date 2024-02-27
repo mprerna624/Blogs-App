@@ -1,0 +1,21 @@
+<%- include('./partials/header') %>
+
+
+<main class="container">
+
+    <div class="heading">
+        <h2 class="title"><%= foundBlogObj.blogTitle %></h2>
+        <p class="username">Written by <span> <%= foundBlogObj.username %></span></p>
+    </div>
+    
+    <div class="blog-content">
+        <% for(let para of foundBlogObj.blog) { %>
+                <p><%= para %></p>
+        <% } %>
+
+    </div>
+</main>
+    
+
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('./partials/header') %>
+
+<main class="container">
+    <fieldset class="row justify-content-center">
+        <legend class="text-center my-4">Form for New Blog</legend>
+        
+        <br>  
+        <form action="/blogs" method="POST" class="col-8">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div class="mb-3">
+                <label for="blogTitle" class="form-label">Blog Title</label>
+                <input type="text" class="form-control" id="blogTitle" name="blogTitle" placeholder="Enter blog title">
+            </div>
+            <div class="mb-3">
+                <label for="blog" class="form-label">Blog</label>
+                <textarea class="form-control" id="blog" name="blog" placeholder="Enter your blog" rows="12"></textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-sm btn-primary">Add Blog</button>
+            </div>
+        </form> 
+        
+    </fieldset>
+</main>
+
+<%- include('./partials/footer') %>

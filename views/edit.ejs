@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+
+<main class="container">
+    <fieldset class="row justify-content-center">
+        <legend class="text-center my-4">Form for Editing a Particular Blog</legend>
+        
+        <br>  
+        <form action="/blogs/<%= foundBlogObj.id %>?_method=PATCH" method="POST" class="col-8">
+            <div class="mb-3">
+                <label for="blogTitle" class="form-label">Blog Title</label>
+                <input type="text" class="form-control" id="blogTitle" name="blogTitle" value="<%= foundBlogObj.blogTitle %>">
+            </div>
+            <div class="mb-3">
+                <label for="blog" class="form-label">Blog</label>
+                <textarea class="form-control" id="blog" name="blog" rows="12">
+                    <% for(let para of foundBlogObj.blog){ %> 
+                        <%= para %> 
+                    <% } %>
+                </textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-sm btn-primary">Edit Blog</button>
+            </div>
+        </form> 
+        
+    </fieldset>
+</main>
+
+
+<%- include('./partials/footer') %>
